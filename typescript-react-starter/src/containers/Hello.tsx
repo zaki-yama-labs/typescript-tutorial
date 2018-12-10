@@ -5,9 +5,9 @@ import Hello from '../components/Hello'
 import * as actions from '../actions'
 import { StoreState } from '../types';
 
-export function mapStateToProps({ enthusiamLevel, languageName }: StoreState) {
+export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
   return {
-    enthusiamLevel,
+    enthusiasmLevel,
     name: languageName,
   };
 }
