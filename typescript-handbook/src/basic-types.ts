@@ -68,3 +68,14 @@ function infiniteLoop(): never {
   while (true) {
   }
 }
+
+/* object */
+declare function create(o: object | null): void;
+
+// OK
+create({ prop: 0 });
+create(null);
+
+// NG
+create(42);
+create('string');
