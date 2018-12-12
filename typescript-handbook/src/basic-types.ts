@@ -53,6 +53,7 @@ let n: null = null;
 
 // Never
 // The `never` type represents the type of values that never occur
+// 必ず exception を throw するか、絶対に return されない関数などに対して使う
 function error(message: string): never {
   throw new Error(message);
 }
@@ -62,3 +63,8 @@ function fail() {
   return error('Something failed');
 }
 
+// Function returning never must have unreachable end point
+function infiniteLoop(): never {
+  while (true) {
+  }
+}
