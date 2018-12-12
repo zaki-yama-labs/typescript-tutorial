@@ -79,3 +79,13 @@ create(null);
 // NG
 create(42);
 create('string');
+
+
+/* Type assertions
+ * 型を明示的に教える
+ */
+let someValue: any = 'this is a string';
+
+let strLength: number = (<string>someValue).length;
+// or
+// let strLength: number = (someValue as string).length;
